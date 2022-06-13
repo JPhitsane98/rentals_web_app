@@ -1,11 +1,9 @@
 package com.ian.jerminah.rentals.repository;
 
 import com.ian.jerminah.rentals.domain.Rental;
-import org.springframework.data.repository.Repository;
-import org.springframework.stereotype.Component;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Component
-public class RentalRepository implements Repository<Rental, Integer> {
+public interface RentalRepository extends JpaRepository<Rental, Integer> {
 
 
 }

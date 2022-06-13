@@ -3,15 +3,16 @@ package com.ian.jerminah.rentals.service.impl;
 import com.ian.jerminah.rentals.domain.User;
 import com.ian.jerminah.rentals.repository.UserRepository;
 import com.ian.jerminah.rentals.service.UserService;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
+  private UserRepository userRepository;
+
   @Override
   public void register (final User user) {
-
+    userRepository.save(user);
   }
 
   @Override
@@ -21,11 +22,11 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public void delete (final User user) {
-
+    userRepository.delete(user);
   }
 
   @Override
   public List<User> getAllUsers () {
-    return null;
+    return userRepository.findAll();
   }
 }
