@@ -13,7 +13,9 @@ import java.math.BigDecimal;
 @Entity
 @Table (name = "rentals")
 public class Rental extends BaseEntity{
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  private Long RentalId;
   private Byte[] pictures;
 
   private String description;

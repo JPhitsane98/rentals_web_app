@@ -11,9 +11,9 @@ public interface RentalService {
 
   void save(Rental rental);
 
-  void update (Rental rental);
+  void update (String email,Rental rental);
 
-  void delete (Rental rental);
+  void delete (String email);
 
   List<Rental> getAllRentals ();
 }
